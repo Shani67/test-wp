@@ -1,0 +1,20 @@
+@use 'sass:math';
+@use 'sass:meta';
+
+@function get-vw($px-value) {
+  // Validate input is a number
+  @if meta.type-of($px-value) != 'number' {
+    @error 'get-vw() expects a number, got #{meta.type-of($px-value)}';
+  }
+
+  // Ensure it has 'px' units
+  @if not math.unit($px-value) == 'px' {
+    @error 'get-vw() requires a px unit. Example: get-vw(32px)';
+  }
+
+  // Strip px unit
+  $numeric: math.div($px-value, 1px);
+
+  // Convert to vw from a 1920px context
+  @return math.div($numeric, 1920) * 100 * 1vw;
+}

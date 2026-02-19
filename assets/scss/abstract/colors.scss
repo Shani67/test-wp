@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use 'sass:math';
+@use "sass:string";
+
+@use './abstract/function' as *;
+@use './abstract/variables' as *;
+
+// ------------------------------
+// COLOR UTILITIES
+// ------------------------------
+
+// Text Color Utilities
+@each $name,
+$value in $colors {
+    .#{"#{$name}"}-color,
+ .text-#{"#{$name}"} {
+ color: $value !important;
+}
+}
+
+// Background Color Utilities
+@each $name,
+$value in $colors {
+    .bg-#{"#{$name}"} {
+ background-color: $value !important;
+}
+}
+
+
+// BORDER COLOR UTILITIES (6-color palette)
+@each $name,
+$value in $colors {
+    .border-#{"#{$name}"}{
+ border-color: $value !important;
+}
+}
+
+// ------------------------------
+// FONT FAMILY UTILITIES
+// ------------------------------
+.primary-font {
+    font-family: $primary-font;
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+}
+
+.tertiary-font {
+    font-family: $tertiary-font;
+}
+
+.quaternary-font{
+    font-family: $quaternary-font;
+}
+
+.quinary-font {
+    font-family: $quinary-font;
+}
+
+.senary-font {
+    font-family: $senary-font;
+}

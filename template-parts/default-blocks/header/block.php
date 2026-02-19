@@ -1,0 +1,11 @@
+<?php
+    // wp_enqueue_style('header-css');
+
+    $css_path = get_template_directory() . '/assets/css/components/header.css';
+    if (file_exists($css_path)) {
+        echo '<style>';
+        readfile($css_path);
+        echo '</style>';
+    }
+?>
+
