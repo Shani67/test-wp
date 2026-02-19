@@ -163,7 +163,7 @@ function webp_image_url($image_url){
     return file_exists($webp_path) ? $webp_url : $image_url;
 }
 
-dd_action('wp_dashboard_setup', 'add_lighthouse_dashboard_widget');
+add_action('wp_dashboard_setup', 'add_lighthouse_dashboard_widget');
 
 // Breadcrum 
 
