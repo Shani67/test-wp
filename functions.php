@@ -54,13 +54,11 @@ function custom_resources()
 {
 
 	wp_register_style('global-css', get_template_directory_uri() . '/assets/css/abstract/global.css');
-	wp_register_style('common-css', get_template_directory_uri() . '/assets/css/abstract/common.css');
 	wp_register_style('colors-css', get_template_directory_uri() . '/assets/css/abstract/colors.css');
 	wp_register_style('fancybox', get_template_directory_uri() . '/plugins/fancybox/jquery.fancybox.min.css');
 
 	wp_enqueue_style('bootstrap-css');
 	wp_enqueue_style('global-css');
-	wp_enqueue_style('common-css');
 	wp_enqueue_style('colors-css');
 	wp_enqueue_style('fancybox');
 
