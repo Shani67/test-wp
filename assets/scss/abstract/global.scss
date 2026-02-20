@@ -29,6 +29,7 @@ body {
   padding: 0;
   font-family: $primary-font;
   background: #000;
+  color: #fff;
 }
 
 h1,
@@ -47,10 +48,16 @@ p {
 
 a {
   cursor: pointer;
+  color: #fff;
 }
 
 button{
-  background: transparent;
+  background: #fff;
+  border: 0;
+  color: #000;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
 
 // --- Scrollbar ---
@@ -83,6 +90,8 @@ button{
 /*
 Theme Name: A11y Sample Theme
 */
+
+
 
 :root { --a11y-font-scale: 1; }
 html { font-size: calc(16px * var(--a11y-font-scale)); }
