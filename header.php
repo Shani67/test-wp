@@ -62,7 +62,7 @@
 
     <div class="header-row">
       <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-        <?php bloginfo('name'); ?>
+        Accessibility Web
       </a>
 
       <nav class="primary-nav" aria-label="Primary navigation">
