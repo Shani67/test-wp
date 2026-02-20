@@ -39,6 +39,16 @@ function enqueue_venobox() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_venobox' );
 
+add_action('wp_enqueue_scripts', function () {
+
+  wp_enqueue_script(
+    'a11y-tools',
+    get_template_directory_uri() . '/assets/js/a11y-tools.js',
+    [],
+    '1.0',
+    true
+  );
+});
 
 function custom_resources()
 {
@@ -273,15 +283,5 @@ function the_breadcrumb() {
     }
 }
 
-add_action('wp_enqueue_scripts', function () {
-  wp_enqueue_style('theme-style', get_stylesheet_uri(), [], '1.0');
 
-  wp_enqueue_script(
-    'a11y-tools',
-    get_template_directory_uri() . '/assets/js/a11y-tools.js',
-    [],
-    '1.0',
-    true
-  );
-});
 
