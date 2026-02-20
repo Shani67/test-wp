@@ -272,3 +272,16 @@ function the_breadcrumb() {
         echo '</div>';
     }
 }
+
+add_action('wp_enqueue_scripts', function () {
+  wp_enqueue_style('theme-style', get_stylesheet_uri(), [], '1.0');
+
+  wp_enqueue_script(
+    'a11y-tools',
+    get_template_directory_uri() . '/assets/js/a11y-tools.js',
+    [],
+    '1.0',
+    true
+  );
+});
+
